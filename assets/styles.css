@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#back{
+    width: 100%;
+    height: 100vh;
+}
+#back img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#top{
+    z-index: 1;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#workingArea{
+    width: 80%;
+    max-width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*nav starts*/
+#workingArea #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+#nav img{
+    height: 60px;
+    pointer-events: all;
+    cursor: pointer;
+}
+#nLeft, #nRight{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+#nav a{
+    pointer-events: all;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+/*nav ends and hero starts*/
+#hero{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: space-between;
+}
+#heroLeft{
+    min-width: 50%;
+}
+
+#heroLeft .elem{
+    height: 5vw;
+    margin-bottom: 2vw;
+    overflow: hidden;
+    position: relative;
+}  
+#heroLeft .elem h1:nth-child(1){
+    top: 0;
+}
+#heroLeft .elem h1{
+    position: absolute;
+    top: 100%;
+    font-size: 6vw;
+    line-height: 0.8;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+#heroLeft button{
+    pointer-events: all;
+    margin-top: 2vw;
+    border: 1.3px solid white;
+    font-size: 2vw;
+    padding: 1vw 4vw;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#heroRight{
+    min-width: 10%;
+    max-width: 20%;
+    overflow: hidden;
+}
+#heroRight img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+} 
+/*click anywhere*/
+.text {
+    font-size: 2vw;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+.text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
